@@ -3,18 +3,8 @@
 .clients {
     padding: 0 $space;
     text-align: center;
-    background-color: $primary;
-    color: $white;
+    @extend %common-bg;
 
-    h3 {
-        font-size: 28px;
-        margin-bottom: $space ;
-        text-transform: uppercase;
-
-        @include mq(768px) {
-            font-size: 40px;
-        }
-    }
 
     .item {
         padding: $space * 2 $space;

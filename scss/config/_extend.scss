@@ -1,0 +1,6 @@
+@use "./variable" as *;
+
+%common-bg {
+    background-color: $primary;
+    color: $white;
+}

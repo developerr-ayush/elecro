@@ -1,20 +1,8 @@
 @use "../config/" as *;
 
 .news {
-    background-color: $primary;
-    color: $white;
     padding: 100px $space;
-
-    h3 {
-        font-size: 28px;
-        margin-bottom: $space * 2;
-        text-align: center;
-        text-transform: uppercase;
-
-        @include mq(768px) {
-            font-size: 40px;
-        }
-    }
+    @extend %common-bg;
 
     h4 {
         font-size: 24px;

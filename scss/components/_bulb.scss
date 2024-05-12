@@ -1,10 +1,9 @@
 @use "../config/" as *;
 
 .see-bulb {
-    background-color: $primary;
-    color: $white;
     padding: 100px $space;
     text-align: center;
+    @extend %common-bg;
 
     h3 {
         margin-bottom: 0;
