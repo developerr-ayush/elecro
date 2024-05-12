@@ -1,0 +1,67 @@
+@use "../config/" as *;
+
+.see-bulb {
+    background-color: $primary;
+    color: $white;
+    padding: 100px $space;
+    text-align: center;
+
+    h3 {
+        font-size: 28px;
+
+        text-transform: uppercase;
+
+        @include mq(768px) {
+            font-size: 40px;
+        }
+    }
+
+    .head {
+        margin-bottom: $space * 2;
+    }
+
+    .body {
+        padding-inline: $space *2;
+
+        @include mq(768px) {
+            max-width: 900px;
+            margin: auto;
+        }
+    }
+
+    .bulb-text {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        left: 0;
+        font-size: 30px;
+    }
+
+    .owl-prev,
+    .owl-next {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+        background-color: $secondary !important;
+
+        @include mq(768px) {
+            left: -40px;
+        }
+
+        span {
+            color: $primary;
+        }
+    }
+
+    .owl-next {
+        transform: translate(50%, -50%);
+
+        right: 0;
+        left: unset;
+
+        @include mq(768px) {
+            right: -40px;
+        }
+    }
+}

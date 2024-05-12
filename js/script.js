@@ -1,13 +1,27 @@
 document.getElementById("hamburger").addEventListener("click", () => {
     document.getElementById("navigation").classList.toggle("active")
 })
-$('.owl-carousel').owlCarousel({
+$('#hero').owlCarousel({
     loop: true,
     margin: 10,
     nav: true,
     responsive: {
         0: {
             items: 1
+        },
+    }
+})
+$('#bulb').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 2,
+            margin: 30,
         },
     }
 })
