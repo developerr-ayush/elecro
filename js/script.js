@@ -11,6 +11,16 @@ $('#hero').owlCarousel({
         },
     }
 })
+$('#client').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    responsive: {
+        0: {
+            items: 1
+        },
+    }
+})
 $('#bulb').owlCarousel({
     loop: true,
     margin: 10,
