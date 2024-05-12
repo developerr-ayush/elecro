@@ -1,0 +1,84 @@
+@use "../config/" as *;
+
+.hero {
+    background-color: $primary;
+    color: $white;
+    min-height: 100vh;
+    padding: $space;
+    padding-top: $header-height+30px;
+
+    h3 {
+        font-size: 50px;
+
+        @include mq(991px) {
+            font-size: 70px;
+        }
+
+
+    }
+
+    p {
+        margin-bottom: 10px;
+
+        @include mq(768px) {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    button {
+        margin-bottom: $space;
+    }
+
+    .owl-dots,
+    .owl-nav {
+        display: none;
+    }
+
+    @include mq(768px) {
+        display: flex;
+        align-items: center;
+        background: url("/img/banner-bg.png") center/cover;
+
+        .item {
+            display: flex;
+        }
+
+        .content {
+            flex-shrink: 0;
+            width: 50%;
+        }
+
+        .image {
+            display: none;
+        }
+
+        .owl {
+
+            &-nav {
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    font-size: 30px;
+                }
+            }
+
+            &-prev,
+            &-next {
+                background-color: #363636 !important;
+                color: white;
+                transition: 300ms;
+
+                &:hover {
+                    background-color: white !important;
+
+                    span {
+                        color: #363636;
+
+                    }
+                }
+            }
+        }
+    }
+}

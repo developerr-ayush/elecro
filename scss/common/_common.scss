@@ -1,0 +1,16 @@
+@use "../config/" as *;
+
+.owl {
+
+    &-prev,
+    &-next {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+.btn {
+    padding: 10px 40px;
+    background-color: $secondary;
+    color: $white;
+}

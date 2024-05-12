@@ -1,4 +1,2 @@
-@use "./config/" as *;
-body{
-    background-color: blue;
-}
+@forward "./common/";
+@forward "./components/hero";

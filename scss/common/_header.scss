@@ -1,0 +1,106 @@
+@use "../config/" as *;
+
+header {
+    padding: $space;
+    color: $white;
+    height: $header-height;
+    position: fixed;
+    z-index: 2;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: baclground-color 300ms;
+
+    &.sticky {
+        background-color: $primary;
+    }
+}
+
+.btn-hamburger {
+    width: 50px;
+    height: 50px;
+    flex-direction: column;
+    margin-left: $space;
+
+    @include mq(768px) {
+        display: none;
+    }
+
+    .line {
+        width: 80%;
+        height: 2px;
+        background-color: $white;
+        margin-bottom: 12px;
+
+        &-bottom {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.logo {
+    img {
+        width: 100px;
+
+    }
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: calc(100% - $header-height);
+    top: $header-height;
+    left: -100%;
+    background-color: black;
+    transition: left 500ms;
+
+    @include mq(768px) {
+        background-color: transparent;
+        position: unset;
+        height: 100%;
+    }
+
+    &.active {
+        left: 0;
+    }
+}
+
+.nav {
+    &-list {
+        list-style: none;
+
+        @include mq(768px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px
+        }
+    }
+
+    &-anchor {
+        font-size: 16px;
+        padding: $space;
+        display: block;
+        color: $white;
+        text-decoration: none;
+        border-bottom: 1px solid rgb($white, 0.5);
+        text-transform: uppercase;
+
+        @include mq(768px) {
+            border: 0;
+        }
+    }
+}
+
+.search-icon {
+    margin-left: auto;
+
+    @include mq(768px) {
+        order: 1;
+    }
+
+    i {
+        color: $white;
+    }
+}
