@@ -1,0 +1,28 @@
+@use "../config/" as *;
+
+.contact {
+    background-color: $primary;
+    color: $white;
+    padding: 0 $space 100px;
+
+    .form {
+        max-width: 800px;
+        margin: auto;
+
+        .btn {
+            margin: auto;
+            display: block;
+            padding: $space $space*3;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            width: max-content;
+            transition: 300ms;
+
+            &:hover {
+                background-color: $white !important;
+                color: #000
+            }
+        }
+    }
+}

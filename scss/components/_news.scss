@@ -1,0 +1,53 @@
+@use "../config/" as *;
+
+.news {
+    background-color: $primary;
+    color: $white;
+    padding: 100px $space;
+
+    h3 {
+        font-size: 28px;
+        margin-bottom: $space * 2;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include mq(768px) {
+            font-size: 40px;
+        }
+    }
+
+    h4 {
+        font-size: 24px;
+        margin-block: $space;
+    }
+
+    p {
+
+        margin-block: $space;
+    }
+
+    a {
+        display: block;
+        width: max-content;
+        text-decoration: none;
+        background-color: transparent;
+        border: 1px solid $white;
+        font-weight: 700;
+        margin-bottom: $space * 2;
+    }
+
+    @include mq(768px) {
+        .body {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: $space * 2;
+        }
+    }
+
+    @include mq(991px) {
+        .body {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
